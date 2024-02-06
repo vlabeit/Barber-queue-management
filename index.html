@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="src/sass/main.scss" />
     <script type="module" src="src/js/controller.js"></script>
 
-    <title>forkify // Search over 1,000,000 recipes</title>
+    <title> Search over 1,000 business</title>
   </head>
 
   <body>
@@ -24,7 +24,7 @@
           <input
             type="text"
             class="search__field"
-            placeholder="Search over 1,000,000 recipes..."
+            placeholder="Search over 1,000 business..."
           />
           <button class="btn search__btn">
             <svg class="search__icon">
@@ -41,7 +41,7 @@
                 <svg class="nav__icon">
                   <use href="src/img/icons.svg#icon-edit"></use>
                 </svg>
-                <span>Add recipe</span>
+                <span>Add appointment</span>
               </button>
             </li>
             <li class="nav__item">
@@ -83,27 +83,27 @@
           </ul>
         </nav>
       </header>
-
+      
       <div class="search-results">
+      <h1 style="margin-left: 20px;">Available Barbers</h1>
+
         <ul class="results">
-          <!-- 
           <li class="preview">
             <a class="preview__link preview__link--active" href="#23456">
               <figure class="preview__fig">
-                <img src="src/img/test-1.jpg" alt="Test" />
+                <img alt="Test" />
               </figure>
               <div class="preview__data">
-                <h4 class="preview__title">Pasta with Tomato Cream ...</h4>
-                <p class="preview__publisher">The Pioneer Woman</p>
+                <h4 class="preview__title">Barber 1</h4>
+                <p class="preview__publisher">Open Now</p>
                 <div class="preview__user-generated">
                   <svg>
-                    <use href="src/img/icons.svg#icon-user"></use>
+                    <use ></use>
                   </svg>
                 </div>
               </div>
             </a>
           </li>
-           -->
         </ul>
 
         <div class="pagination">
@@ -140,7 +140,7 @@
               <use href="src/img/icons.svg#icon-smile"></use>
             </svg>
           </div>
-          <p>Start by searching for a recipe or an ingredient. Have fun!</p>
+          <p>Start by searching for a business or choose business close to you on the left menu!</p>
         </div>
 
         <!-- <div class="spinner">
@@ -261,63 +261,44 @@
       <button class="btn--close-modal">&times;</button>
       <form class="upload">
         <div class="upload__column">
-          <h3 class="upload__heading">Recipe data</h3>
-          <label>Title</label>
+          <h3 class="upload__heading">Your data</h3>
+          <h5 style="font-size: 1rem;" class="upload__heading">Have account? <a href="#">Login</a> Or fill the data</h5>
+          <label>Full Name</label>
           <input value="TEST23" required name="title" type="text" />
-          <label>URL</label>
+          <label>Phone Number</label>
           <input value="TEST23" required name="sourceUrl" type="text" />
-          <label>Image URL</label>
-          <input value="TEST23" required name="image" type="text" />
-          <label>Publisher</label>
-          <input value="TEST23" required name="publisher" type="text" />
-          <label>Prep time</label>
-          <input value="23" required name="cookingTime" type="number" />
-          <label>Servings</label>
-          <input value="23" required name="servings" type="number" />
+          
+          <label>Price</label>
+          <input value="50" disabled required name="cookingTime"  />
+         
         </div>
 
         <div class="upload__column">
-          <h3 class="upload__heading">Ingredients</h3>
-          <label>Ingredient 1</label>
+          <h3 class="upload__heading">Service data</h3>
+          <label>Date</label>
           <input
-            value="0.5,kg,Rice"
-            type="text"
+            type="date"
             required
             name="ingredient-1"
             placeholder="Format: 'Quantity,Unit,Description'"
           />
-          <label>Ingredient 2</label>
+          <label>Time</label>
           <input
-            value="1,,Avocado"
+            type="text"
+            required
+            name="ingredient-1"
+            value="Click to Select Time"
+          />
+          <label>Service</label>
+          <input
+            value="Click to select service"
             type="text"
             name="ingredient-2"
             placeholder="Format: 'Quantity,Unit,Description'"
           />
-          <label>Ingredient 3</label>
-          <input
-            value=",,salt"
-            type="text"
-            name="ingredient-3"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-          <label>Ingredient 4</label>
-          <input
-            type="text"
-            name="ingredient-4"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-          <label>Ingredient 5</label>
-          <input
-            type="text"
-            name="ingredient-5"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
-          <label>Ingredient 6</label>
-          <input
-            type="text"
-            name="ingredient-6"
-            placeholder="Format: 'Quantity,Unit,Description'"
-          />
+          <label>Amount</label>
+          <input value="1" required name="cookingTime" type="number" />
+          
         </div>
 
         <button class="btn upload__btn">
